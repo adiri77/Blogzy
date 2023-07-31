@@ -1,0 +1,92 @@
+.abc{
+  color: white;
+}
+a.abc1:hover{
+    color:greenyellow;
+    
+    
+    
+      }
+      .abc3:hover{
+        border:2px solid black;
+        background-color: skyblue;
+      }
+      .xyz:hover{
+        color: greenyellow;
+      }
+    
+      .city-info h2 {
+        color: skyblue;
+    }
+    
+    .famous-cities {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .city-card {
+        width: 45%;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .city-card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .city-card h3 {
+        color: skyblue;
+        margin-bottom: 5px;
+    }
+    .mnp{
+      height: 287px;
+    }
+    .jkl{
+      margin-right: 46px;
+      margin-left: 46px;
+    }
+    .rty{
+      margin: 30px;
+    }
+    .uio{
+          margin: 15px; 
+        }
+    .rty{
+        background-color:#4169E1 ;
+      
+    }
+   .ghj{
+    margin: 20px;
+    
+    border: 2px solid black;
+    border-radius: 30px;
+    
+   }
+   .ert{
+    height:251px;
+    border-top-left-radius:30px ;
+    border-top-right-radius:30px ;
+    
+   }
+   .coll:hover{
+background-color: #ffb100;
+color: #fffaff;
+   }
+  .coll{
+    color: #ff5e00; border-radius: 20px; font-size: medium; cursor: pointer;
+  }
+  .more{
+    display: none;
+  }
+  .apc{
+    margin:3px;
+    height:35px;
+  }
+  .mn{
+    height:300px
+  }

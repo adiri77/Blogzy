@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">  
+<link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+  <style>
+
+  </style>
+  <body>
+    <div class="jkl">
+      <nav class="navbar navbar-expand-lg " style="background-color:black; border: 2px solid black;">
+        <div class="container-fluid">
+          <a class="navbar-brand abc xyz" href="index.html"  ><h2><b><i class="fas fa-gem me-3"></i>VlogG</b></h2></a>
+          <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item abc2">
+                <a class="nav-link abc abc1" aria-current="page" href="index1.html" onclick="active()"  ><h5><b>Home</h5></b></a>
+              </li>
+              <li class="nav-item abc2">
+                <a class="nav-link abc abc1" aria-current="page" href="index2.html" onclick="active()" ><h5><b>Booking</b></h5></a>
+              </li>
+              <li class="nav-item abc2">
+                <a class="nav-link abc abc1" aria-current="page" href="index3.html"  id="am"><h5><b>Place</b></h5></a>
+              </li>
+              <li class="nav-item abc2">
+                <a class="nav-link abc abc1" aria-current="page" href="index4.html" onclick="active()"><h5><b>Shopping</b></h5></a>
+              </li>
+              <li class="nav-item dropdown abc1">
+                <a class="nav-link dropdown-toggle abc abc1 " style="margin-top: 2px" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>  More</b>
+                </a>
+                <ul class="dropdown-menu" style="background-color: #4169E1; border: 2px solid black;">
+                  <li><a class="dropdown-item abc abc3" href="index5.html" onclick="active()"><h5><b>Local Cuisine</b></h5></a></li>
+                  <li><a class="dropdown-item abc abc3" href="index6.html" onclick="active()"><h5><b>Event</b></h5></a></li>
+                  <li><a class="dropdown-item abc abc3" href="adi.html" onclick="active()"><h5><b>Nightlife</b></h5></a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link abc1 abc"  aria-current="page" href="index10.html" ><i class="fa-solid fa-right-to-bracket"></i></a>
+              </li>
+              
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+       <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.fests.info/2019/07/Bas-Kar-Bassi-Feat.-Anubhav-Singh-Bassi.jpg" class="d-block w-100" alt="..." style="height: 400px;">
+              </div>
+              <div class="carousel-item">
+                <img src="https://assets-in.bmscdn.com/nmcms/events/banner/mobile/media-mobile-jo-bolta-hai-wohi-hota-hai-feat-harsh-gujral-0-2023-7-27-t-15-25-13.jpg" class="d-block w-100" alt="..." style="height: 400px;">
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <hr>
+          <div class="mt-5">
+            <h2><b>Events In Delhi-NCR</b></h2>
+          </div>
+          <div class="mt-4">
+            <button type="button" class="btn btn-danger apc" id="comedy" onclick="abhi('comedy')" style="border-radius: 20px;">Comedy Shows</button>
+            <button type="button" class="btn btn-danger apc" id="online" onclick="abhi('online')" style="border-radius: 20px;">Online Streaming Events</button>
+            <button type="button" class="btn btn-danger apc" id="workshop" onclick="abhi('workshop')" style="border-radius: 20px;">Workshops</button>
+            <button type="button" class="btn btn-danger apc" id="music" onclick="abhi('music')" style="border-radius: 20px;">Music Shows</button>
+          
+            <button type="button" class="btn btn-danger apc" id="exibition" onclick="abhi('exibition')" style="border-radius: 20px;">Exhibition</button>
+            <button type="button" class="btn btn-danger apc" id="celebrity" onclick="abhi('celebrity')" style="border-radius: 20px;">Celebrity Wishes</button>
+
+          </div>
+
+          <div class="row mt-4" >
+            <div class="col col-md-3 online">
+                <div class="card" style="width: 14rem; border-radius: 10px;">
+                    <img src="./image/Screenshot 2023-07-29 002130.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                    <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                      <h5 class="card-title text-white">Sun, 30 July</h5>
+                      
+                    </div></div>
+                
+                <div style="width: 14rem; border-radius: 10px;"><h5><b>Karan Singh Magic: Not An influencer</b></h5>
+                </div>
+                <div style="width: 14rem; border-radius: 10px;"><h6>The Laugh Store Vegas Mall</h6></div>
+                <div style="width: 14rem; border-radius: 10px; color: #666666;">Stand Up Comedy</div>
+                <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 499</div>
+                
+                  </div>
+                  
+            
+            <div class="col col-md-3 comedy"> <div class="card" style="width: 14rem; border-radius: 10px;">
+                <img src="./image/Screenshot 2023-07-29 003512.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                  <h5 class="card-title text-white">Sun, 30 July</h5>
+                  
+                </div>
+              </div>
+              <div style="width: 14rem; border-radius: 10px;"><h5><b>Anubhav Bassi Live (New Material)</b></h5>
+              </div>
+              <div style="width: 14rem; border-radius: 10px;"><h6>Weightlifting Auditorium, JLN Stadium Delhi</h6></div>
+              <div style="width: 14rem; border-radius: 10px; color: #666666;">Stand Up Comedy</div>
+              <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 1499</div>
+              
+            </div>
+            <div class="col col-md-3 comedy"> <div class="card" style="width: 14rem; border-radius: 10px;">
+                <img src="./image/Screenshot 2023-07-29 003958.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                  <h5 class="card-title text-white">Tue, 1 Aug Onward</h5>
+                  
+                </div>
+              </div>
+              <div style="width: 14rem; border-radius: 10px;"><h5><b>Jo Bolta Hai Wahi Hoto Hai Feat Harsh Gujar</b></h5>
+              </div>
+              <div style="width: 14rem; border-radius: 10px;"><h6>Multiple Venues</h6></div>
+              <div style="width: 14rem; border-radius: 10px; color: #666666;">Stand Up Comedy</div>
+              <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 799</div>
+            </div>
+            <div class="col col-md-3 comedy"> <div class="card" style="width: 14rem; border-radius: 10px;">
+                <img src="./image/Screenshot 2023-07-29 004318.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                  <h5 class="card-title text-white">Thu, 3 Aug</h5>
+                  
+                </div></div>
+                <div style="width: 14rem; border-radius: 10px;"><h5><b>PokerBazzi Present "The Big Lineup 2023"</b></h5>
+                </div>
+                <div style="width: 14rem; border-radius: 10px;"><h6>Weightlifting Auditorium, JLN Stadium Delhi</h6></div>
+                <div style="width: 14rem; border-radius: 10px; color: #666666;">Stand Up Comedy</div>
+                <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 1799</div>
+          </div>
+
+          <div class="col col-md-3 music">
+            <div class="card" style="width: 14rem; border-radius: 10px;">
+                <img src="./image/Screenshot 2023-07-29 012920.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                  <h5 class="card-title text-white">Sun, 30 July</h5>
+                  
+                </div></div>
+            
+            <div style="width: 14rem; border-radius: 10px;"><h5><b>WE3S Ent Fest Ft. B Praak & Dr. Mashoor Gulati</b></h5>
+            </div>
+            <div style="width: 14rem; border-radius: 10px;"><h6>Indra Gandhi Indore Stadium, New Delhi</h6></div>
+            <div style="width: 14rem; border-radius: 10px; color: #666666;">Concert</div>
+            <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 499</div>
+            
+              </div>
+
+              <div class="col col-md-3 music">
+                <div class="card" style="width: 14rem; border-radius: 10px;">
+                    <img src="./image/Screenshot 2023-07-29 014557.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                    <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                      <h5 class="card-title text-white">Sun, 27 Aug</h5>
+                      
+                    </div></div>
+                
+                <div style="width: 14rem; border-radius: 10px;"><h5><b>Kacha Ghada : Rahgir Live</b></h5>
+                </div>
+                <div style="width: 14rem; border-radius: 10px;"><h6>Aiwan-E-Galib Auditorium</h6></div>
+                <div style="width: 14rem; border-radius: 10px; color: #666666;">Music Show</div>
+                <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 399</div>
+                
+                  </div>
+
+                  <div class="col col-md-3 kid exibition">
+                    <div class="card" style="width: 14rem; border-radius: 10px;">
+                        <img src="./image/Screenshot 2023-07-29 015103.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                        <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                          <h5 class="card-title text-white">Sat, 28 Aug</h5>
+                          
+                        </div></div>
+                    
+                    <div style="width: 14rem; border-radius: 10px;"><h5><b>SAFARNAMA - Annual Children Theatre Programme </b></h5>
+                    </div>
+                    <div style="width: 14rem; border-radius: 10px;"><h6>Dev Public School, New Delhi</h6></div>
+                    <div style="width: 14rem; border-radius: 10px; color: #666666;">Acting</div>
+                    <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 15000</div>
+                    
+                      </div>
+
+
+                      <div class="col col-md-3 workshop" >
+                        <div class="card" style="width: 14rem; border-radius: 10px;">
+                            <img src="./image/Screenshot 2023-07-29 015748.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                            <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                              <h5 class="card-title text-white">Sat, 28 Aug</h5>
+                              
+                            </div></div>
+                        
+                        <div style="width: 14rem; border-radius: 10px;"><h5><b>Shanti Dave: Neither Earth, Nor Sky </b></h5>
+                        </div>
+                        <div style="width: 14rem; border-radius: 10px;"><h6>DAG, New Delhi</h6></div>
+                        <div style="width: 14rem; border-radius: 10px; color: #666666;">Art And Craft</div>
+                        <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 399</div>
+                        
+                          </div>
+                          <div class="col col-md-3 music">
+                            <div class="card" style="width: 14rem; border-radius: 10px;">
+                                <img src="./image/Screenshot 2023-07-29 014150.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                                <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                                  <h5 class="card-title text-white">Sat, 28 Aug</h5>
+                                  
+                                </div></div>
+                            
+                            <div style="width: 14rem; border-radius: 10px;"><h5><b>Mehfil-E-Sartaaj Gurgaon </b></h5>
+                            </div>
+                            <div style="width: 14rem; border-radius: 10px;"><h6>Gym Khana Club, Gurgaon</h6></div>
+                            <div style="width: 14rem; border-radius: 10px; color: #666666;">Music</div>
+                            <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 500</div>
+                            
+                              </div>
+
+                              <div class="col col-md-3 celebrity">
+                                <div class="card" style="width: 14rem; border-radius: 10px;">
+                                    <img src="./image/Screenshot 2023-07-29 020652.png" class="card-img-top mn" alt="..." style="border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                                    <div class="card-body bg-dark" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                                      <h5 class="card-title text-white">Sat, 28 Aug</h5>
+                                      
+                                    </div></div>
+                                
+                                <div style="width: 14rem; border-radius: 10px;"><h5><b>Unluclass </b></h5>
+                                </div>
+                                <div style="width: 14rem; border-radius: 10px;"><h6>Multiple Venues</h6></div>
+                                <div style="width: 14rem; border-radius: 10px; color: #666666;">Celebrity Wishes</div>
+                                <div style="width: 14rem; border-radius: 10px;color: #666666;"><i class="fa-solid fa-indian-rupee-sign"></i> 699</div>
+                                
+                                  </div>
+          </div>
+<hr>
+          <div class="mt-2" >
+    
+            <footer class="text-center text-lg-start  text-muted" style="background-color: black">
+              <div style="color: white;"> 
+              <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+             
+                <div class="me-5 d-none d-lg-block">
+                  <span>Get connected with us on social networks:</span>
+                </div>
+                
+                <div>
+                  <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+               
+              </section>
+              
+              <section class="">
+                <div class="container text-center text-md-start mt-5">
+                  <!-- Grid row -->
+                  <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                      <!-- Content -->
+                      <h6 class="text fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>VlogG
+                      </h6>
+                      <p>
+                        Unlock the World through Our Lens: Unleash the Vlogger in You
+                      </p>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                   
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                      <!-- Links -->
+                      <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                      </h6>
+                      <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">Help</a>
+                      </p>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                      <!-- Links -->
+                      <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                      <p><i class="fas fa-home me-3"></i> New Delhi,India</p>
+                      <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        vlogG@gmail.com
+                      </p>
+                      <p><i class="fas fa-phone me-3"></i> +91 9026201633</p>
+                      <p><i class="fas fa-print me-3"></i> +91 9897942667</p>
+                    </div>
+                    <!-- Grid column -->
+                  </div>
+                  <!-- Grid row -->
+                </div>
+              </section>
+              
+            
+              
+              <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2023 Copyright:
+                <a class="text-reset fw-bold" href="#">VlogG.com</a>
+              </div>
+              </div>
+            </footer>
+            </div>
+         
+          
+          </div>
+         
+          
+          
+          <script>
+            function active(){
+        document.getElementById("am").setAttribute("class","nav-link abc abc1");
+            }
+        
+      function abhi(Id){
+        
+      
+          if(Id=="comedy"){
+  
+  let a=document.querySelectorAll('.music,.kid,.celebrity,.workshop,.exibition,.online');
+  let l=document.querySelectorAll('.comedy');
+a.forEach(ele=>{
+  ele.style.display='none';
+});
+l.forEach(ele=>{
+  ele.style.display='';
+});
+  
+  
+  
+  
+}
+
+else if(Id=="music"){
+  let b=document.querySelectorAll('.comedy,.kid,.celebrity,.workshop,.exibition,.online');
+  let j=document.querySelectorAll('.music');
+b.forEach(ele=>{
+  ele.style.display='none';
+});
+j.forEach(ele=>{
+  ele.style.display='';
+});
+}
+else if(Id=="celebrity"){
+  let c=document.querySelectorAll('.music,.kid,.comedy,.workshop,.exibition,.online');
+  let m=document.querySelectorAll('.celebrity');
+c.forEach(ele=>{
+  ele.style.display='none';
+});
+m.forEach(ele=>{
+  ele.style.display='';
+});
+}
+else if(Id=="workshop"){
+  let d=document.querySelectorAll('.music,.kid,.celebrity,.comedy,.exibition,.online');
+  let i=document.querySelectorAll('.workshop');
+d.forEach(ele=>{
+  ele.style.display='none';
+});
+i.forEach(ele=>{
+  ele.style.display='';
+});
+}
+else if(Id=="exibition"){
+  let e=document.querySelectorAll('.music,.kid,.celebrity,.workshop,.comedy,.online');
+  let h=document.querySelectorAll('.exibition');
+e.forEach(ele=>{
+  ele.style.display='none';
+});
+h.forEach(ele=>{
+  ele.style.display='';
+});
+}
+else{
+  let f=document.querySelectorAll('.music,.kid,.celebrity,.workshop,.comedy,.exibition');
+  let g=document.querySelectorAll('.online');
+f.forEach(ele=>{
+  ele.style.display='none';
+});
+g.forEach(ele=>{
+  ele.style.display='';
+});
+
+      }
+
+}
+           </script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        </body>
+        </html>
