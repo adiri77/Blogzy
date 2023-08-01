@@ -90,3 +90,6 @@ color: #fffaff;
   .mn{
     height:300px
   }
+  .tm:hover{
+    cursor:grab;
+  }

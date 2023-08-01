@@ -20,38 +20,39 @@
           <div class="mt-4">
 <div class="row ">
   <div class="col col-md-8" >
-    <div class="row"><b>10557 Le Mount</b></div>
-    <div class="row" style="opacity: 0.64;"><p>Aero City, Mahipalpur Extension, Delhi</p></div>
-    <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <div class="row mt-3" ><b>1 Night</b></div>   
+    <div class="row" ><b id="ab2">10557 Le Mount</b></div>
+    <div class="row" style="opacity: 0.64;" ><p id="ab3">Aero City, Mahipalpur Extension, Delhi</p></div>
+    <div id="pq"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+    <div class="row mt-3" ><b id="ab9"><i class="fa-solid fa-indian-rupee-sign"></i>0</b></div>     
+    <div class="row mt-3" ><b id="ab4">1 Night</b></div>   
         <hr>
              
   </div>
   <div class="col col-md-3 ">
-    <img src="./hotel/hotel1/Screenshot 2023-07-25 012350.png" style="height: 140px;width: 200px;border: 2px solid black;border-radius: 10px;" > 
+    <img id="ab" src="./hotel/hotel1/Screenshot 2023-07-25 012350.png" style="height: 140px;width: 200px;border: 2px solid black;border-radius: 10px;" > 
   </div>
 </div>
 <div class="row">
-  <div class="col col-md-4"><i class="fa-regular fa-calendar fa-xl"></i><b>&nbsp;&nbsp;&nbsp; Tue, 25 July - Wed, 26 July</b> </div>
-  <div class="col col-md-3"><b>1 Room, 2 Guest</b></div>
+  <div class="col col-md-4"><i class="fa-regular fa-calendar fa-xl"></i>&nbsp;&nbsp;&nbsp; <b id="day1">Tue</b>,&nbsp;<b id="date1">25</b>&nbsp;<b id="mon1">July</b>&nbsp;-&nbsp;<b id="day2">Wed</b>,&nbsp;<b id="date2">26</b>&nbsp;<b id="mon2">July</b> </div>
+  <div class="col col-md-3"><i onclick="minus()" class="fa-solid fa-minus tm" style="color: #e61414;"></i>&nbsp;&nbsp;&nbsp;<b id="ab7">1</b>&nbsp;&nbsp; <i onclick="add()" class="fa-solid fa-plus tm" style="color: #01b7e4;"></i>&nbsp;<b id="ad8">Room, 2 Guest</b><br><b style="opacity: 0.64;">(100<i class="fa-solid fa-indian-rupee-sign"></i> Added For Each Extra Members)</b></div>
   </div>
   <div class="row mt-4">
-  <div class="col col-md-4">Room price for 1 Night X 2 Guests</div>
-  <div class="col col-md-3" ><b><i class="fa-solid fa-indian-rupee-sign"></i>4779</b></div>
+  <div class="col col-md-4" id="ab5">Room price for 1 Night X 2 Guests</div>
+  <div class="col col-md-3" ><i class="fa-solid fa-indian-rupee-sign"></i><b id="api">4779</b></div>
 </div>
 <div class="row mt-4">
   <div class="col col-md-4">Coupon Discount</div>
-  <div class="col col-md-3 text-success"><b>60%</b></div>
+  <div class="col col-md-3 text-success"><b id="mo">60</b><b>%</b></div>
 </div>
 <hr>
 <div class="row mt-4">
   <div class="col col-md-4"><div class="row"><h4>Payable Amount</h4></div>
   <div class="row"><h6 style="opacity: 0.64;">Including All Tax</h6></div>
 </div>
-<div class="col col-md-3" ><h1><i class="fa-solid fa-indian-rupee-sign"></i><b id="aman"+>699</b></h1></div>
+<div class="col col-md-3" ><h1><i class="fa-solid fa-indian-rupee-sign"></i><b id="aman">699</b></h1></div>
 </div>
 
-<div class="row mt-5"><button type="button" class="btn" style="width: 500px;border: 2px solid black;color: white; background-color: rgb(5, 93, 38)";>Continue To Buy</button>
+<div class="row mt-5"><button type="button" onclick="day()" class="btn" style="width: 500px;border: 2px solid black;color: white; background-color: rgb(5, 93, 38)";>Continue To Buy</button>
 </div>
   
           </div>
@@ -158,10 +159,91 @@
       </footer>
       </div> </div>
           <script>
+          
 
-            let price=JSON.parse(localStorage.getItem("price"));
-            console.log(price);
-            document.getElementById("aman").innerText=price;
+
+
+
+let Desc=JSON.parse(localStorage.getItem("Desc"));
+let Name=JSON.parse(localStorage.getItem("Name"));
+let image=JSON.parse(localStorage.getItem("image"));
+let star=JSON.parse(localStorage.getItem("star"));
+let   date=JSON.parse(localStorage.getItem("date"));
+let number=JSON.parse(localStorage.getItem("number"));
+let price=JSON.parse(localStorage.getItem("price"));
+let per=JSON.parse(localStorage.getItem("per"));
+let arr=JSON.parse(localStorage.getItem("arr"));
+
+document.getElementById("ab").setAttribute("src",image);
+document.getElementById("ab2").innerText=Name;
+document.getElementById("ab3").innerText=Desc;
+document.getElementById("ab4").innerHTML=`${date} Night`;
+document.getElementById("pq").innerHTML=star;
+document.getElementById("mo").innerText=per;
+document.getElementById("ab5").innerHTML=`Room price for ${date} Night X ${number} Guests `;
+document.getElementById("ad8").innerHTML=`Room, ${number} Guest`;
+document.getElementById("ab9").innerHTML=`<i class="fa-solid fa-indian-rupee-sign"></i>${price}`;
+
+document.getElementById("day1").innerText=arr[2];
+document.getElementById("day2").innerText=arr[3];
+document.getElementById("mon1").innerText=arr[0];
+document.getElementById("mon2").innerText=arr[1];
+document.getElementById("date1").innerText=arr[4];
+document.getElementById("date2").innerText=arr[5];
+
+let r=1;
+let y=1
+function add(){
+   r=parseInt(document.getElementById("ab7").innerText);
+r=r+1;
+document.getElementById("ab7").innerText=r;
+
+
+let u=((parseInt(price)*parseInt(r))+(100*parseInt(number)))*date;
+document.getElementById("api").innerText=u;
+
+
+y=parseInt(u-(parseInt(per)*u)/100);
+document.getElementById("aman").innerText=y;
+}
+
+
+
+function minus(){
+   r=parseInt(document.getElementById("ab7").innerText);
+  if(r>=2){
+r=r-1;}
+document.getElementById("ab7").innerText=r;
+
+
+let u=((parseInt(price)*parseInt(r))+(100*parseInt(number)))*date;
+document.getElementById("api").innerText=u;
+
+
+y=parseInt(u-(parseInt(per)*u)/100);
+document.getElementById("aman").innerText=y;
+}
+
+
+
+
+
+let u=(((parseInt(price)*parseInt(r))+(100*parseInt(number)))*date);
+document.getElementById("api").innerText=u;
+
+
+y=parseInt(u-(parseInt(per)*u)/100);
+document.getElementById("aman").innerText=y;
+
+
+
+  function day(){
+    window.open("test4.html");
+  }
+
+
+
+
           </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>

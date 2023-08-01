@@ -49,7 +49,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link abc1"  aria-current="page" href="#" ><i class="fa-solid fa-right-to-bracket"></i></a>
+                <a class="nav-link abc1 abc"  aria-current="page" href="index10.html" ><i class="fa-solid fa-right-to-bracket"></i></a>
               </li>
               
             </ul>
@@ -253,16 +253,16 @@
         </div>
         <div class="row mt-5">
             <div class="col col-md-5">
-                <input type="date">
+                <input id="yu1" type="date">
             </div>
             <div class="col col-md-2">------></div>
             <div class="col col-md-5">
-                <input type="date">
+                <input id="yu2" type="date">
             </div>
         </div> 
         <div class="row mt-5">
            
-            <input type="number" placeholder="Enter Number Of Visitor">
+            <input type="number" id="yu3" placeholder="Enter Number Of Visitor">
         </div>
         <div class="row mt-4">
             <button onclick="singh()" type="submit" style="background-color:black ;color:white">Submit</button>
@@ -299,7 +299,49 @@ function singh(){
   else{
     window.open("Punjab.html","_self");
   }
+
+let y=document.getElementById("yu3").value;
+  const dateInput1 = document.getElementById('yu1').value;
+const dateInput2 = document.getElementById('yu2').value;
+
+const dateObject1 = new Date(dateInput1);
+const dateObject2 = new Date(dateInput2);
+
+const day1 = dateObject1.getDate();
+const weakday1=dateObject1.getDay();
+const month1=dateObject1.getMonth();
+
+const day2 = dateObject2.getDate();
+const weakday2=dateObject2.getDay();
+const month2=dateObject2.getMonth();
+
+const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+let m=dayNames[weakday1];
+let n=dayNames[weakday2];
+
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+let o=monthNames[month1];
+let p=monthNames[month2];
+
+let arr=[];
+arr.push(o);
+arr.push(p);
+arr.push(m);
+arr.push(n);
+arr.push(day1);
+arr.push(day2);
+  
+
+let t=day2-day1;
+localStorage.setItem("number",JSON.stringify(y));
+localStorage.setItem("date",JSON.stringify(t));
+localStorage.setItem("arr",JSON.stringify(arr));
+
+
+
+
 }
+
 
 
 

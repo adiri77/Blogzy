@@ -28,18 +28,18 @@
         <div class="row mt-4">
             
                 <div class="mb-3">
-                  <label class="form-label">Name</label>
-                  <input type="text" id="name" class="form-control" style="border: 2px solid black;" placeholder="Enter Your Name"></div>
+                  <label class="form-label">Name*</label>
+                  <input type="text" id="name" class="form-control" style="border: 2px solid black;" placeholder="Enter Your Name" required></div>
                   
                 
                 <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" id="adi" style="border: 2px solid black;" placeholder="Enter Your Email">
+                    <label class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="adi" style="border: 2px solid black;" placeholder="Enter Your Email" required>
                     
                   </div>
                   <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" id="adi1" class="form-control" style="border: 2px solid black;" placeholder="Enter Your Password">
+                    <label class="form-label">Password*</label>
+                    <input type="password" id="adi1" class="form-control" style="border: 2px solid black;" placeholder="Enter Your Password" required>
                     
                   </div>
                 <div class="mb-3 form-check">
@@ -58,6 +58,8 @@
         let p=document.getElementById("name").value;
         let m=document.getElementById("adi").value;
         let n=document.getElementById("adi1").value;
+
+        if(p!=""&&m!=""&&n!=""){
         let veri={
           email:m,
           pass:n
@@ -69,7 +71,13 @@
         
       
         alert("Register Successfully");
-        window.open("index10.html","_self");
+        window.open("index10.html","_self");}
+        else{
+          alert("Please Enter Required Details");
+          document.getElementById("name").value="";
+        document.getElementById("adi").value="";
+        document.getElementById("adi1").value="";
+        }
       }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

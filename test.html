@@ -22,7 +22,7 @@
     <div id="carouselExampleRide" class="carousel slide mt-2" data-bs-ride="true" >
         <div class="carousel-inner" style="height: 600px;">
           <div class="carousel-item active">
-            <img src="./hotel/hotel1/Screenshot 2023-07-25 012350.png" class="d-block w-100" alt="...">
+            <img id="ab" src="./hotel/hotel1/Screenshot 2023-07-25 012350.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <img src="./hotel/hotel1/Screenshot 2023-07-25 012448.png" class="d-block w-100" alt="...">
@@ -49,11 +49,11 @@
       <div style="display: flex; flex-direction:column">
       <div class="mt-2">
         <div class="row">
-            <div class="col col-md-6"><h1><b>OYO 10557 Le Mount</b></h1></div>
-            <div class="col col-md-6 mt-2"><button type="button" class="btn" style="width: 500px;border: 2px solid black;color: white; background-color: rgb(5, 93, 38);"><b>Book Now</b></button>
+            <div class="col col-md-6"><h1 id="ab2"><b>OYO 10557 Le Mount</b></h1></div>
+            <div class="col col-md-6 mt-2"><button type="button" class="btn" style="border: 2px solid black;color: white; background-color: rgb(5, 93, 38);"><a href="test2.html" style="text-decoration: none; color: white;"><b>Book Now</b></a></button>
             </div>
       </div></div>
-      <div><p style="color: #222;opacity: 0.54;"><b>Rz-97-a, Street Number 5, Mahipalpur, Delhi Transit</b></p></div>
+      <div><p style="color: #222;opacity: 0.54;" id="ab3"><b>Rz-97-a, Street Number 5, Mahipalpur, Delhi Transit</b></p></div>
 
       <div style="display: flex; flex-direction:column">
         <h4><b>Discription</b></h4>
@@ -219,6 +219,16 @@
       </footer>
       </div>
 </div>
+<script>
+let Desc=JSON.parse(localStorage.getItem("Desc"));
+let Name=JSON.parse(localStorage.getItem("Name"));
+let image=JSON.parse(localStorage.getItem("image"));
+
+
+document.getElementById("ab").setAttribute("src",image);
+document.getElementById("ab2").innerText=Name;
+document.getElementById("ab3").innerText=Desc;
+</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
