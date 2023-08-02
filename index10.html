@@ -63,7 +63,8 @@ if(ele.email==m && ele.pass==n){
   
   window.open("index.html","_self");
   t=1;
-  localStorage.removeItem('check');
+  localStorage.setItem("t",JSON.stringify(t));
+        
  
   return;
 

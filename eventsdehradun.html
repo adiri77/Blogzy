@@ -44,7 +44,7 @@
                   
                 </ul>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="ub">
                 <a class="nav-link abc abc1"  aria-current="page" href="index10.html" ><i class="fa-solid fa-right-to-bracket"></i></a>
               </li>
               
@@ -419,7 +419,10 @@ ele.style.display='';
 
 }
 
-function add(Id){
+let m= JSON.parse(localStorage.getItem("t"))||"0";
+          if(m==1){
+  document.getElementById("ub").style.display="none";
+  function add(Id){
   window.open("index7.html","_self");
   let m=document.querySelector('#'+Id+' .ary').getAttribute("src");
   let n=document.querySelector('#'+Id+' .su').innerHTML;
@@ -436,6 +439,17 @@ function add(Id){
   localStorage.setItem("rs",JSON.stringify(r));
 
   
+
+
+         }
+
+   
+}
+else{
+function add(Id){
+  alert("First You Need To Login");
+  window.open("index10.html","_self");
+}
 }
 
       

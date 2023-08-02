@@ -44,7 +44,7 @@
                   
                 </ul>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="ub">
                 <a class="nav-link abc1 abc"  aria-current="page" href="index10.html" ><i class="fa-solid fa-right-to-bracket"></i></a>
               </li>
               
@@ -347,6 +347,10 @@ moreText.style.display = "none";
 btnText.innerHTML = "Read More"; 
 dots.style.display = "inline";
 }
+}
+let m= JSON.parse(localStorage.getItem("t"))||"0";
+if(m==1){
+  document.getElementById("ub").style.display="none";
 }
    </script>
 

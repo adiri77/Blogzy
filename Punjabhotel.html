@@ -44,7 +44,7 @@
                   
                 </ul>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="ub">
                 <a class="nav-link abc1 abc"  aria-current="page" href="index10.html" ><i class="fa-solid fa-right-to-bracket"></i></a>
               </li>
               
@@ -70,7 +70,7 @@
                 <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">2999</b>&nbsp;&nbsp;</div>
                 <div class="text-success"><b class="mo">20</b><b>% (Off In Totle Amount)</b></div>
                 </div>
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab1')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab1')">Book Now</a>
                 </div>
               </div></div>
 
@@ -85,7 +85,7 @@
                     <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">1999</b>&nbsp;&nbsp;</div>
                     <div class="text-success"><b class="mo">30</b><b>% (Off In Totle Amount)</b></div>
                     </div> 
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab2')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab2')">Book Now</a>
                 </div>
               </div></div>
               
@@ -99,7 +99,7 @@
                     <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">1499</b>&nbsp;&nbsp;</div>
                     <div class="text-success"><b class="mo">39</b><b>% (Off In Totle Amount)</b></div>
                     </div>
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab3')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab3')">Book Now</a>
                 </div>
               </div></div>
             <div class="col col-md-6"><div class="card ghj" id="ab4">
@@ -112,7 +112,7 @@
                     <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">1299</b>&nbsp;&nbsp;</div>
                     <div class="text-success"><b class="mo">49</b><b>% (Off In Totle Amount)</b></div>
                     </div>
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab4')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab4')">Book Now</a>
                 </div>
               </div></div>
               
@@ -126,7 +126,7 @@
                     <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">999</b>&nbsp;&nbsp;</div>
                     <div class="text-success"><b class="mo">10</b><b>% (Off In Totle Amount)</b></div>
                     </div>
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab5')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab5')">Book Now</a>
                 </div>
               </div></div>
             <div class="col col-md-6"><div class="card ghj" id="ab6">
@@ -153,7 +153,7 @@
                     <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">1899</b>&nbsp;&nbsp;</div>
                     <div class="text-success"><b class="mo">20</b><b>% (Off In Totle Amount)</b></div>
                     </div>
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab7')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab7')">Book Now</a>
                 </div>
               </div></div>
             <div class="col-md-6"><div class="card ghj" id="ab8">
@@ -166,7 +166,7 @@
                     <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">1799</b>&nbsp;&nbsp;</div>
                     <div class="text-success"><b class="mo">55</b><b>% (Off In Totle Amount)</b></div>
                     </div>
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab8')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab8')">Book Now</a>
                 </div>
               </div></div>
               
@@ -278,11 +278,12 @@
       
         </div>
         <script>
-         function active(){
- document.getElementById("am").setAttribute("class","nav-link abc abc1");
-         }
+        
 
-         function add(Id){
+           let m= JSON.parse(localStorage.getItem("t"))||"0";
+          if(m==1){
+  document.getElementById("ub").style.display="none";
+  function add(Id){
 let m=document.querySelector('#'+Id+' .cd').innerHTML;
 let n=document.querySelector('#'+Id+' .am').innerHTML;
 let p=document.querySelector('#'+Id+' .pq').innerHTML;
@@ -297,11 +298,20 @@ localStorage.setItem("image",JSON.stringify(o));
 localStorage.setItem("price",JSON.stringify(q));
 localStorage.setItem("per",JSON.stringify(r));
 
-
+window.open("test.html","_self");
          }
 
+   
+}
+else{
+function add(Id){
+  alert("First You Need To Login");
+  window.open("index10.html","_self");
+}
+}
+
          
-let arrP=JSON.parse(localStorage.getItem("arrP"));
+let arrP=JSON.parse(localStorage.getItem("arrP"))||[];
          if(arrP!=[]){
 
           arrP.forEach(ele => {
