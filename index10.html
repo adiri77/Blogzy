@@ -9,6 +9,8 @@
 </head>
   <body>
     
+    
+    
     <div class="row" >
         <div class="col"></div>
         <div class="col col-md-3 mt-3" style="border-radius: 15px;color: white;background-color:black;">
@@ -54,14 +56,36 @@
       let m=document.getElementById("adi").value;
       let n= document.getElementById("adi1").value;
       let check=JSON.parse(localStorage.getItem("check"))||[];
+      let w=JSON.parse(localStorage.getItem("m"))||"0";
+      let x=JSON.parse(localStorage.getItem("n"))||"0";
+      let y=JSON.parse(localStorage.getItem("o"))||"0";
+      let z=JSON.parse(localStorage.getItem("p"))||"0";
       let t=0
 
       if(m!=""&&n!=""){
       check.forEach(ele => {
 if(ele.email==m && ele.pass==n){
   alert("Login Successfully");
+  if(w==1){
+  window.open("index2.html","_self");
+  localStorage.setItem("m",JSON.stringify(0));
+}
+  else if(x==1){
+    window.open("bangalorehotel.html","_self");
+    localStorage.setItem("n",JSON.stringify(0));
+  }
+  else if(y==1){
+    window.open("Dehradunhotel.html","_self");
+    localStorage.setItem("o",JSON.stringify(0));
+  }
+  else if(z==1){
+    window.open("Punjabhotel.html","_self");
+    localStorage.setItem("p",JSON.stringify(0));
+  }
+    else{
+      window.open("index.html","_self");
+    }
   
-  window.open("index.html","_self");
   t=1;
   localStorage.setItem("t",JSON.stringify(t));
         
