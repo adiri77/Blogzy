@@ -25,7 +25,7 @@
                     <img src="./hotel/hotel1/Eo_circle_green_checkmark.svg-removebg-preview(1).png" style="height: 150px;width:150px">
                 </div>
                 <div class="text-center">
-                    <h1><b> Thank You For Booking !</b></h1>
+                    <h1><b id="uj"> Thank You For Booking !</b></h1>
                     <p>We Will Send Your Booking Details To Your E-Mail </p>
                     <button class="btn btn-primary" onclick="day()">Back To Home</button>
                 </div>
@@ -135,6 +135,8 @@
       </div>
             </div>
             <script>
+              let m=JSON.parse(localStorage.getItem("username"));
+              document.getElementById("uj").innerHTML=`Thank You For Booking ${m}!`;
 
 function day(){
     window.open("index.html");

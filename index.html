@@ -9,11 +9,6 @@
    <link rel="stylesheet" href="style.css">
   </head>
 <style>
-  
-  
- 
-
-
 </style>
   <body>
     <div class="jkl">
@@ -344,7 +339,16 @@ localStorage.setItem("arr",JSON.stringify(arr));
 
 let m= JSON.parse(localStorage.getItem("t"))||"0";
 if(m==1){
-  document.getElementById("ub").style.display="none";
+  document.getElementById("ub").innerHTML=`
+  <img  id="gd" onclick="log()" src="./image3/20230803_113958.png"  style="height:50px;width:70px">
+  `;
+}
+function log(){
+  localStorage.setItem("t",JSON.stringify(0));
+  alert("You Are LogOut");
+  document.getElementById("ub").innerHTML=`
+  <a class="nav-link abc1 abc"  aria-current="page" href="index10.html" ><i class="fa-solid fa-right-to-bracket"></i></a>
+  `;
 }
         
         

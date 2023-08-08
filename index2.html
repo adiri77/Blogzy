@@ -305,6 +305,7 @@ window.open("test.html","_self");
 else{
 function add(Id){
   alert("First You Need To Login");
+  localStorage.setItem("m",JSON.stringify(1));
   window.open("index10.html","_self");
 }
 }
@@ -331,7 +332,7 @@ let arrD=JSON.parse(localStorage.getItem("arrD"))||[];
                     <div><i class="fa-solid fa-indian-rupee-sign"></i><b class="ty">${ele.fee}</b>&nbsp;&nbsp;</div>
                     <div class="text-success"><b class="mo">${ele.dis}</b><b>% (Off In Totle Amount)</b></div>
                     </div>
-                  <br><a href="test.html" class="btn btn-primary" onclick="add('ab${m}')">Book Now</a>
+                  <br><a href="#" class="btn btn-primary" onclick="add('ab${m}')">Book Now</a>
                 </div>
               </div>`
 x.innerHTML=p;
